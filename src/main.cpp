@@ -1200,13 +1200,13 @@ struct Map {
       }
 
       if (abs(uv.u * normal) >= 1e-3) {
-        cerr << "U vector is not included in face: u.n = " << (uv.u * normal) << endl;
-        return false;
+        cerr << "U vector is not included in face: u.n = " << (uv.u * normal) << "; ignoring" << endl;
+        
       }
 
       if (abs(uv.v * normal) >= 1e-3) {
-        cerr << "V vector is not included in face: v.n = " << (uv.v * normal) << endl;
-        return false;
+        cerr << "V vector is not included in face: v.n = " << (uv.v * normal) << "; ignoring" << endl;
+        
       }
 
       map << "    ";
